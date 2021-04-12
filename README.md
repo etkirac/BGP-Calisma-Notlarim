@@ -1,5 +1,4 @@
-# BGP-Calisma-Notlarim
-# BGP (Border Gateway Protocol) Çalışma Notlarım
+# BGP (Border Gateway Protocol) 
 BGP, genellikle Internet Service Provider (İnternet Servis Sağlayıcıları) tarafından kullanılan gelişmiş bir yönlendirme protokolüdür. BGP’de routerlara 1 ile 65535 arasında değişen otonom sistem (AS) numarası tanımlanır. BGP, yönlendirme tablosunu oluşturmak için metrik hesaplar, bu hesaplama hedefe giderken üzerinden geçilen otonom sistem sayısıdır. Yani, BGP Path Vector (Yol Vektörü) algoritmasını kullanır. Fakat, Distance Vector algoritmasını kullanan EIGRP’nin aksine farklı otonom sistemler arasında da çalışabilmektedir. Ayrıca BGP, IP adreslerinin özetlenmesini sağlayan CIDR’i (Classless Inter Domain Routing) destekler.
 
 ### Path Attributes (Yol Özellikleri)
@@ -77,13 +76,13 @@ Regular expression, Türkçe anlamıyla Düzenli veya Kurallı İfadeler, genell
          [] (Brackets)	      ->       Dizideki karakterlerden biri ile eşleşmesi için kullanılır.
          ^ (Caret)	          ->       Dizinin başlangıcındaki karakteri ifade etmek için kullanılır.
          ? ( Question Mark)	  ->       Karakterin var olup olmadığından emin olunmadığı zaman kullanır.(Karakter ya yok ya da 1 kere var)
-         $ (Dollar Sign)	    ->       Dizinin sonundaki karakteri ifade etmek için kullanılır.
-         * (Asteriks)	        ->       Karakterin sıfır veya sıfırdan fazla kere kullanıldığından emin olunmadığı zaman    kullanılır. (Karakter ya yok ya da 1,2,3,.. kere olabilir.) 
-        + (Plus Sign)	        ->       Karakterin bir kereden fazla var olup olmadığından emin olunmadığı zaman kullanılır. (Karakter 1,2,3,4,.. kere olabilir.)
+         $ (Dollar Sign)	  ->       Dizinin sonundaki karakteri ifade etmek için kullanılır.
+         * (Asteriks)	      ->       Karakterin sıfır veya sıfırdan fazla kere kullanıldığından emin olunmadığı zaman    kullanılır. (Karakter ya yok ya da 1,2,3,.. kere olabilir.) 
+        + (Plus Sign)	      ->       Karakterin bir kereden fazla var olup olmadığından emin olunmadığı zaman kullanılır. (Karakter 1,2,3,4,.. kere olabilir.)
          _ (Underscore)       ->       Karakterle direkt eşleştirmek istediğimiz zaman kullanılır.
-         | (Pipe)	            ->       OR fonksiyonu gibi çalışır.
+         | (Pipe)	          ->       OR fonksiyonu gibi çalışır.
          -  (Hyphen)          ->	   Parantez içinde sayı aralığını belirtmek için kullanılır.
-         () (Parentheses)	    ->      Bir dizi belirtmek için kullanılır.
+         () (Parentheses)	  ->      Bir dizi belirtmek için kullanılır.
       [^] (Caret in brackets) ->	   Parantez içinde listelenen karakterleri içermez.
       
 Regular Expression, BGP’de filtreleme yaparak gözlem yapılabilmesi için ya da policy uygularken kullanılır. BGP özelinde bu ifadelerden bazılarının nasıl kullanıldığını örneklerde gösterilmiştir. 
@@ -111,7 +110,7 @@ Route-map bileşenleri ve işlem sırası belirlendikten sonra, bu bölümde rot
     match ip address             ->  Prefix’ler ACL’de tanımlanan ip adresleriyle eşleşir. verir.
     match ip address prefix-list ->  Prefix’ler prefix-list ile tanımlanan ip adresleriyle eşleşir.
     match local-preference 	     ->  Prefix’ler BGP özelliği olan local-preference’a göre eşleşir.
-    match metric 	               ->  Prefix’ler metric değerine bağlı eşleşir.
+    match metric 	             ->  Prefix’ler metric değerine bağlı eşleşir.
     match tag                    ->	 Prefix’ler sayısal bir etiketlemeye bağlı eşleşir.
     
 Bu komutlar çoklu eşleşme izin verir.
@@ -121,7 +120,7 @@ Ek olarak, prefix’in geçmesine izin verildiğinde, route map rotaların bazı
 
     set as-path prepend     ->	Prefix için otonom sistem yolunu öne ekler.
     set ip next-hop	        ->  Herhangi bir eşleşme için bir sonraki adımda olan IP adresini ekler.
-    set local-preference	  ->  BGP özelliği olan local preference ekler.
+    set local-preference	->  BGP özelliği olan local preference ekler.
     set metric              ->  Rota için belirlenen metric değerini değiştirir.
     set tag	                ->  Prefix’ler sayısal bir etiketlemeye bağlı eşleşir.
     set weight              ->	BGP özelliği olan weight değerini ekler.
