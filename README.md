@@ -73,12 +73,12 @@ Yedekliliği sağlamanın en iyi ve en basit yollarından biri ikinci bir yol sa
 Regular expression, Türkçe anlamıyla Düzenli veya Kurallı İfadeler, genellikle harf ve işaretlerden oluşan karakterler dizisinin bazı kurallar çerçevesinde daha kısa bir ifadeyle belirlenmesini sağlayan yapıdır. Regular Expression ifadeleri ve anlamları aşağıdaki tabloda belirtilmiştir.
 
          . (Period)	          ->       Herhangi bir karakteri ifade etmek için kullanılır.
-         [] (Brackets)	      ->       Dizideki karakterlerden biri ile eşleşmesi için kullanılır.
+         [] (Brackets)	  ->       Dizideki karakterlerden biri ile eşleşmesi için kullanılır.
          ^ (Caret)	          ->       Dizinin başlangıcındaki karakteri ifade etmek için kullanılır.
          ? ( Question Mark)	  ->       Karakterin var olup olmadığından emin olunmadığı zaman kullanır.(Karakter ya yok ya da 1 kere var)
          $ (Dollar Sign)	  ->       Dizinin sonundaki karakteri ifade etmek için kullanılır.
-         * (Asteriks)	      ->       Karakterin sıfır veya sıfırdan fazla kere kullanıldığından emin olunmadığı zaman    kullanılır. (Karakter ya yok ya da 1,2,3,.. kere olabilir.) 
-        + (Plus Sign)	      ->       Karakterin bir kereden fazla var olup olmadığından emin olunmadığı zaman kullanılır. (Karakter 1,2,3,4,.. kere olabilir.)
+         * (Asteriks)	  ->       Karakterin sıfır veya sıfırdan fazla kere kullanıldığından emin olunmadığı zaman    kullanılır. (Karakter ya yok ya da 1,2,3,.. kere olabilir.) 
+        + (Plus Sign)	  ->       Karakterin bir kereden fazla var olup olmadığından emin olunmadığı zaman kullanılır. (Karakter 1,2,3,4,.. kere olabilir.)
          _ (Underscore)       ->       Karakterle direkt eşleştirmek istediğimiz zaman kullanılır.
          | (Pipe)	          ->       OR fonksiyonu gibi çalışır.
          -  (Hyphen)          ->	   Parantez içinde sayı aralığını belirtmek için kullanılır.
