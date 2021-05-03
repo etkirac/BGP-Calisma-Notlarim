@@ -1,5 +1,5 @@
 # BGP (Border Gateway Protocol) 
-BGP, genellikle Internet Service Provider (İnternet Servis Sağlayıcıları) tarafından kullanılan gelişmiş bir yönlendirme protokolüdür. BGP’de routerlara 1 ile 65535 arasında değişen otonom sistem (AS) numarası tanımlanır. BGP, yönlendirme tablosunu oluşturmak için metrik hesaplar, bu hesaplama hedefe giderken üzerinden geçilen otonom sistem sayısıdır. Yani, BGP Path Vector (Yol Vektörü) algoritmasını kullanır. Fakat, Distance Vector algoritmasını kullanan EIGRP’nin aksine farklı otonom sistemler arasında da çalışabilmektedir. Ayrıca BGP, IP adreslerinin özetlenmesini sağlayan CIDR’i (Classless Inter Domain Routing) destekler.
+BGP, genellikle Internet Service Provider (İnternet Servis Sağlayıcıları) tarafından kullanılan gelişmiş bir yönlendirme protokolüdür. BGP’de routerlara otonom sistem (AS) numarası tanımlanır. BGP, yönlendirme tablosunu oluşturmak için metrik hesaplar, bu hesaplama hedefe giderken üzerinden geçilen otonom sistem sayısıdır. Yani, BGP Path Vector (Yol Vektörü) algoritmasını kullanır. Fakat, Distance Vector algoritmasını kullanan EIGRP’nin aksine farklı otonom sistemler arasında da çalışabilmektedir. Ayrıca BGP, IP adreslerinin özetlenmesini sağlayan CIDR’i (Classless Inter Domain Routing) destekler.
 
 ### Path Attributes (Yol Özellikleri)
 Path Attributes kısaca PAs, BGP içindeki yönlendirme politikalarının ayrıntı düzeyini ve denetimini sağlar ve BGP ilişkili her network yolu için PAs kullanır. PAs aşağıdaki gibi sınıflandırılır:
@@ -150,8 +150,11 @@ BGP en iyi yol seçimi, trafiğin otonom sisteme nasıl girdiğinden ve çıktı
 2.	Local Preference (Yüksek olan tercih edilir.)
 3.	Lokal kaynaklı rotalar
 4.	AS_Path ( En kısa otonom sistem yolu tercih edilir.)
-5.	Rotanın kökeni (Tercih sırası IGP, EGP)
-6.	MED değeri (En düşük metrik tercih edilir.)
+5.	Rotanın kökeni (Tercih sırası IGP, Incomplete)
+6.	MED değeri (En düşük metrik tercih edilir.)	
 7.	eBGP, iBGP’e göre tercih edilir.
-8.	Eğer ikisi de eBGP ise, eski olan rota tercih edilir.
+8.	En düşük IGP metric
+9.	Eğer ikisi de eBGP ise, eski olan rota tercih edilir.
+10.	En düşük router-id
+11.	En düşük IP adresine sahip komşu
 
